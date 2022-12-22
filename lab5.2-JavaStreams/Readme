@@ -1,0 +1,8 @@
+Instead of writing a complicated code for Java loops within/after loops, the coder 
+could simply write a pipeline in a few lines and the intent of it would be clear 
+at a glance (in most cases). It resulted in a cleaner code and 
+reduced the need for comments (a huge upside for me personally).
+
+Code writing became faster. Code writing became easier. Knowing how to use 
+Java streams was one of the most important conditions to be accepted in most 
+companies as a Java developer.

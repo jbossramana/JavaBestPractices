@@ -1,0 +1,25 @@
+ Default Modules
+ ==========
+ 
+When we install Java 9, we can see that the JDK now has a new structure.
+
+They have taken all the original packages and moved them into the new module system.
+
+We can see what these modules are by typing into the command line:
+
+java --list-modules
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================
+Ref :  https://javabydeveloper.com/working-java-9-module-eclipse/
+=========================================

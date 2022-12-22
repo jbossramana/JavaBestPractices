@@ -1,0 +1,23 @@
+Java 10 List.copyOf() Method
+=============================
+
+Java 10 List.copyOf() method is introduced to create immutable list from an existing collection.
+Existing collection must not be null and also must not have null elements.
+Any modifications to the original collection after the creation of immutable list will not be 
+reflected in the immutable list.
+
+
+Java 10 Set.copyOf() Method
+===========================
+
+Java 10 Set.copyOf() is introduced to create immutable set from an existing collection.
+The given collection must not be null and must not have null elements.
+Any modifications to the given set after the creation of immutable set will not be reflected in the immutable set.
+
+
+Java 10 Map.copyOf() Method
+===========================
+
+Java 10 Map.copyOf() method is introduced to create immutable copy of an existing map.
+Existing map must not be null and must not have null keys and values.
+Any modifications to the original map after the creation of immutable map will not be reflected in the immutable map.

@@ -1,0 +1,31 @@
+Why is it required to use Java Copy Constructor?
+
+The main purpose of a copy constructor is to create a copy of an object. This helps in the reusability 
+of code. Sometimes we might be required to use a copy of an object with minor changes, without 
+reflecting it to the original one, for such scenarios a copy constructor is essential.
+
+
+Advantages of Using Copy Constructor in Java
+
+The copy constructor can be used to change the state of a variable from final to normal.
+In Copy Constructor there is no need for Type Casting.
+We can change the copied object without hampering the original object.
+It reduces the size of the code.
+It enhances code reusability.
+Copy Constructor is easier when there are several fields in it.
+
+
+Difference Between Java Copy Constructor and Clone() Method:
+
+
+Clone() is also a method using which we can create a duplicate copy of a pre-existing object. But using a clone method is 
+more difficult compared to a copy constructor, due to the following reasons:
+
+1. The clone method may throw an exception if the cloneable is not imported properly. Handling an exception is an extra task. 
+While the Copy Constructor does not throw any such exceptions.
+
+2. Using Clone() we cannot assign values to variables that are declared final. As we all know by now that copy constructor 
+allows us to change the value of final variables.
+
+3. In Clone() method typecasting is required, while in the copy constructor typecasting is not required.
+

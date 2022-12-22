@@ -1,0 +1,16 @@
+Now consider another case when PayPackDetails is declared final, this will 
+make the situation even worse
+
+As the field is declared final, we can not assign a new value to it in clone 
+method as it is declared final. So how to deal with this? 
+Here is the solution: 
+Use a copy constructor and return the new instance from the clone.
+
+Note that the copy constructor access modifier is protected. So now the question 
+comes: why can’t we use a copy constructor for PayPackDetails too instead of 
+clone method? And the answer is: Yes, we can use it.
+
+
+
+
+

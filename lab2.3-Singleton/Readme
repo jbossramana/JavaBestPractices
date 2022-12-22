@@ -1,0 +1,34 @@
+Singleton is a part of Gang of Four design pattern and it is categorized under 
+creational design patterns.
+
+Singleton pattern is a design pattern which restricts a class to instantiate its multiple objects.
+ It is nothing but a way of defining a class. Class is defined in such a way that only one instance 
+ of the class is created in the complete execution of a program or project. It is used where only 
+ a single instance of a class is required to control the action throughout the execution. 
+ 
+ A singleton class shouldn’t have multiple instances in any case and at any cost. Singleton classes 
+ are used for logging, driver objects, caching and thread pool, database connections.
+
+
+Implementation of Singleton class
+
+An implementation of singleton class should have following properties:
+
+It should have only one instance : This is done by providing an instance of the class from within the class. 
+Outer classes or subclasses should be prevented to create the instance. This is done by making the constructor 
+private in java so that no class can access the constructor and hence cannot instantiate it.
+
+Instance should be globally accessible : Instance of singleton class should be globally accessible so that each 
+class can use it. In Java, it is done by making the access-specifier of instance public.
+
+
+How to prevent Singleton Pattern from Reflection, Serialization and Cloning?
+
+Please refer to the examples.
+
+
+
+
+
+
+

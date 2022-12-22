@@ -1,0 +1,6 @@
+Adapter
+
+Make a class appear to support a familiar interface that it doesn’t actually support. 
+This way, existing code can leverage new, unfamiliar classes as if they are existing,
+familiar classes, eliminating the need to refactor the existing code to accommodate 
+the new class

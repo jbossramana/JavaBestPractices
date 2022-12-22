@@ -1,0 +1,31 @@
+Reactive Streams is a standard for asynchronous stream processing with non-blocking back pressure. 
+This specification is defined in the Reactive Manifesto, and there are various implementations of it, 
+for example, RxJava or Akka-Streams.
+
+
+Flow API consists of four basic interfaces:
+
+Subscriber: The Subscriber subscribes to Publisher for callbacks.
+Publisher: The Publisher publishes the stream of data items to the registered subscribers.
+Subscription: The link between publisher and subscriber.
+Processor: The processor sits between Publisher and Subscriber, and transforms one stream to another.
+
+
+Reactive API Overview:
+
+To build a Flow, we can use three main abstractions and compose them into asynchronous processing logic.
+
+Every Flow needs to process events that are published to it by a Publisher instance; the Publisher has one method – subscribe().
+
+If any of the subscribers want to receive events published by it, they need to subscribe to the given Publisher.
+
+The receiver of messages needs to implement the Subscriber interface. Typically this is the end for every Flow processing 
+because the instance of it does not send messages further.
+
+We can think about Subscriber as a Sink. This has four methods that need to be overridden – onSubscribe(), onNext(), onError(), 
+and onComplete(). We'll be looking at those in the next section.
+
+If we want to transform incoming message and pass it further to the next Subscriber, we need to implement the Processor interface. 
+This acts both as a Subscriber because it receives messages, and as the Publisher because it processes those messages and sends 
+them for further processing.
+

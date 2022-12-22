@@ -1,0 +1,67 @@
+Optional Object
+
+NullPointerException is very common on Java, whenever we try to perform any operation on any 
+variable which is not yet initialized or holds a null value, we get a NullPointerException. 
+
+For long developers have been using the try-catch block to handle unexpected null pointer exceptions, 
+but now from Java 8, a new class named Optional has been introduced to handle null values 
+without any exception.
+
+
+Creating Optional Object
+
+import java.util.Optional
+Following is the declaration of the class,
+
+public final class Optional<T> extends Object
+
+To initialize an Optional class object, we can use the following methods provided in the Optional class:
+
+empty()
+of()
+ofNullable()
+
+Optional<String> empty = Optional.empty();
+This will be an empty object initialization and if we use the isPresent() method to check if any value 
+is present in the Optional object, it will return false.
+
+
+String name = "Studytonight";
+
+Optional<String> opt = Optional.of(name);
+Now the object opt will hold a string variable name. However, the argument passed to the of() method 
+should not be null.
+
+
+String name = "Studytonight";
+
+Optional<String> opt = Optional.ofNullable(name);
+In the code above, even if variable name contains null, the code will work just fine.
+
+
+Checking Value of the Optional Object
+We can use the isPresent() method to check whether the Optional object contains any value or not. 
+It will return True if any value is enclosed inside the Optional object, otherwise, it returns False.
+
+
+
+Using Optional object and ifPresent() method, we can follow functional programming paradigm, and 
+accomplish the above in just a single line of code,
+
+
+String name = "Studytonight";
+
+Optional<String> opt = Optional.ofNullable(name);
+
+opt.ifPresent(name-> System.out.println(name.length()));
+
+
+Assigning Default Value
+=======================
+
+String name = null;
+
+Optional<String> opt = Optional.ofNullable(name).orElse("Studytonight");
+
+Now, in the code above, as the value of the variable name is null, hence the default value "Studytonight" will be saved in the 
+Optional object.

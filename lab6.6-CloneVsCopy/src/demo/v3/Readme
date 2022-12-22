@@ -1,0 +1,12 @@
+Now what do you think would the salary of employee1 be? As we have increased the salary of cloned employee, 
+we naturally expect the salary to be increased for him. But the unexpected turn here is the salary for employee1 
+also gets increased. Here is the output or this:
+
+
+Employee{name:=Ram, id:=1, package:=750000.0}
+Employee{name:=Krish, id:=2, package:=750000.0}
+
+Please note that when we clone an object, the constructor does not get called. It would rather make a field-by-field 
+copy of all the member variables present in the address location of the original object. And now when there are 
+object references, the reference gets copied but not the original object. Hence both the original and cloned objects 
+point to the same member object. So changes made in one object would automatically be visible to the other. 
